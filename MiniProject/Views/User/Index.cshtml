@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MiniProject.Models.User>;
+@{
+    ViewData["Title"] = "Your Order";
+}
+<h1 style="text-align: center;">Your Order</h1>
+<p style="text-align: center;">Your Order is in processing, Please wait.</p>
+@foreach (var User in Model)
+{
+    <p>ID : @User.Id</p>
+    <p>Order : @User.Menu</p>
+    <p>Option : @User.Option</p>
+    <p>Location : @User.Location</p>
+    <strong class="text-danger">Wait...</strong>
+    <hr/>
+}
